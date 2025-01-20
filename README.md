@@ -43,3 +43,38 @@ make make_application
 make
 ```
 для сборки всего проекта.
+Для запуска приложения после сборки введите:
+```
+./test_application /Your/Path/To/Journal.txt 1
+```
+Здесь /Your/Path/To/Journal.txt - путь до журнала, 1 - приоритет по умолчанию.
+
+Приоритеты вводятся следующим образом:
+0 - Low
+1 - Medium
+2 - High
+
+Если хотите ввести сообщение введите строку, начинающуюся не с '-', в этой же строке опционально последним символом укажите приоритет и перейдите на следующую строку.
+
+Если хотите выйти из приложения введите '-exit'
+
+Если хотите сменить приоритет по умолчанию введите '-change' и в новой строке приоритет.
+Пример работы:
+```
+user@desktop:~/WorkDir$ ./test_application "/home/user/Journal.txt" 1
+Message first 1
+Message second 0
+Message third 2
+-change
+0
+Message last 0
+exit
+-exit
+```
+Файл /home/user/Journal.txt
+```
+Mon Jan 20 18:10:48 2025 MSK Medium Message first
+Mon Jan 20 18:11:03 2025 MSK High Message third
+Mon Jan 20 18:11:33 2025 MSK Low Message last
+Mon Jan 20 18:11:36 2025 MSK Low exit
+```
