@@ -13,4 +13,6 @@ make_library:
 make_application:
 	$(CC) $(CXXFLAGS) -o test_application ./main.cpp -L./$(LIB_DIR) -ljournal -Wl,-rpath,./$(LIB_DIR)
 
-
+clean:
+	rm -r ./lib
+	rm test_application
