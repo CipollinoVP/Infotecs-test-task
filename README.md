@@ -62,19 +62,27 @@ make
 Пример работы:
 ```
 user@desktop:~/WorkDir$ ./test_application "/home/user/Journal.txt" 1
+Enter message or command:
 Message first 1
+Enter message or command:
 Message second 0
+Enter message or command:
 Message third 2
+Enter message or command:
 -change
+Enter new priority:
 0
-Message last 0
-exit
+Enter message or command:
+Message fourth 0
+Enter message or command:
+Message last
+Enter message or command:
 -exit
 ```
 Файл /home/user/Journal.txt
 ```
-Mon Jan 20 18:10:48 2025 MSK Medium Message first
-Mon Jan 20 18:11:03 2025 MSK High Message third
-Mon Jan 20 18:11:33 2025 MSK Low Message last
-Mon Jan 20 18:11:36 2025 MSK Low exit
+Tue Jan 21 20:39:59 2025 MSK Medium Message first 
+Tue Jan 21 20:40:14 2025 MSK High Message third 
+Tue Jan 21 20:40:40 2025 MSK Low Message fourth 
+Tue Jan 21 20:40:47 2025 MSK Low Message last
 ```
