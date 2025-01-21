@@ -2,6 +2,8 @@
 
 ## Руководство по использованию библиотеки journal.h
 
+Ссылка на github проекта: https://github.com/CipollinoVP/Infotecs-test-task
+
 Заголовочный файл в папке include, исходный код в src.
 
 ### Сборка библиотеки
