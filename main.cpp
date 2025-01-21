@@ -8,6 +8,7 @@
 #define ASCII_ZERO 48
 
 //Макросы для команд
+#define EMPTY_ENTER -1
 #define CHANGE_PRIORITY 1
 #define EXIT 2
 #define NO_COMMAND 0
@@ -71,7 +72,7 @@ int main(int argc, char* argv[]) {
                         message, std::ref(*journal), min_priority);
                 break;
             default:
-                std::cout << "Unknown command" << std::endl;
+                std::cout << "Unknown command or empty string" << std::endl;
         }
     }
 
@@ -89,6 +90,9 @@ int get_priority(std::string& message){
 }
 
 int command_handler(std::string const& message){
+    if (message.length() == 0){
+        return EMPTY_ENTER;
+    }
     if (message[0] != '-'){
         return NO_COMMAND;
     }
